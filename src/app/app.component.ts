@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   name = 'Fizzbuzz Game';
   answer = [];
+  show = false;
 
   ngOnInit() {
     let i = 1;
@@ -22,5 +23,9 @@ export class AppComponent  {
       );
       i+= 1;
     } while (i < 101)
+  }
+
+  public toggleStyle() {
+      this.show = !this.show;
   }
 }

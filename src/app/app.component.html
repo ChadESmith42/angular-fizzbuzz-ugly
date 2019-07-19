@@ -1,9 +1,10 @@
 <h1>{{name}}</h1>
 <div class="container">
-  <div class="item" *ngFor="let part of answer">
-    <span *ngIf="part === 'Fizz'" class="fizz bold">{{part}}</span>
-    <span *ngIf="part === 'Buzz'" class="buzz bold">{{part}}</span>
-    <span *ngIf="part === 'Fizzbuzz'" class="fizzbuzz bold">{{part}}</span>
-    <span *ngIf="part%1===0" class="number">{{part}}</span>
-  </div>
+  <button mat-raised-button color="accent" (click)="toggleStyle()">Beautify!</button>
+</div>
+<div class="container" *ngIf="!show">
+  <app-ugly-fizzbuzz [answer]="answer"></app-ugly-fizzbuzz>
+</div>
+<div class="container" *ngIf="show">
+  <app-pretty-fizzbuzz [answer]="answer"></app-pretty-fizzbuzz>
 </div>

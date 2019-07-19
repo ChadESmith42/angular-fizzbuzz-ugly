@@ -1,0 +1,8 @@
+<div class="container">
+<div class="item" *ngFor="let part of answer">
+    <span *ngIf="part === 'Fizz'" class="fizz bold">{{part}}</span>
+    <span *ngIf="part === 'Buzz'" class="buzz bold">{{part}}</span>
+    <span *ngIf="part === 'Fizzbuzz'" class="fizzbuzz bold">{{part}}</span>
+    <span *ngIf="part%1===0" class="number">{{part}}</span>
+  </div>
+</div>
