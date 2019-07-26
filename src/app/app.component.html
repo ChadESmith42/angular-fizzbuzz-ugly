@@ -1,6 +1,10 @@
+
 <h1>{{name}}</h1>
 <div class="container">
-  <button mat-raised-button color="accent" (click)="toggleStyle()">Beautify!</button>
+  <button mat-raised-button color="accent" (click)="toggleStyle()">
+    <span [hidden]="show">Beautify!</span>
+    <span [hidden]="!show">Make It Ugly!</span>
+  </button>
 </div>
 <div class="container" *ngIf="!show">
   <app-ugly-fizzbuzz [answer]="answer"></app-ugly-fizzbuzz>
